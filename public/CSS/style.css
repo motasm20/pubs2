@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #FF4655;
+    backdrop-filter: blur(5px);
+
+}
+
+.nav_logo {
+    height: 50px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('../img/lobby.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: rgb(33, 30, 30);
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+.Maps {
+    width: 100%;
+    height: 100%;
+    border: 5px solid white;
+    transition: 0.4s;
+}
+
+.container {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.neon_hover{
+    color: #fff;
+  font-weight:bold;
+  transition: 0.4s;
+}
+
+.neon_hover:hover {
+    text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 8px #00ff33, 0 0 10px #00ff33, 0 0 15px #00ff33, 0 0 20px #00ff33, 0 0 25px #00ff33, 0 0 30px #00ff33;
+}
+
+.container-rollen{
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.roll-logo{
+    width: 70px;
+    transition: 0.4s;
+}
+.roll-logo:hover{
+    transform: scale(1.2);
+    
+}
+
+.container-geslecteerde-rol{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border-radius: 15px;
+    margin: 30px;
+    align-items: center;
+    
+    gap: 10px;
+    background-color: #0f0e0ee1;
+    padding: 20px;
+}
+
+.geslecterde-agent{
+    width: 50%;
+    transition: 0.4s;
+}
+.geslecterde-agent:hover{
+    transform: scale(1.2);
+}
+
+.Maps:hover {
+    transform: scale(1.1);
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+.Maps img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: rgb(33, 30, 30);
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+nav .links {
+    display: flex;
+    gap: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* store pagina */
+.product {
+    max-width: 80%;
+    height: auto;
+    border-radius: 20px;
+    border: 5px solid white;
+}
+
+.container_store {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 20px;
+}
+
+
+/* store pagina */
+.tekst_store_pruducten {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.tekst_store_pruducten p {
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 2px;
+
+}
+
+.container_store button {
+    background-color: brown;
+}
+
+/* stylen van de shop fotos */
+.overlay {
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+    height: 85%;
+}
+
+
+
+/* footer */
+
+.social_media {
+    background-color: rgb(31, 33, 30);
+    display: grid;
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5%;
+}
+
+.S_M_logo img {
+    width: 40px;
+}
+
+
+
+
+
+/* responsive maken */
+@media (max-width:500px) {
+
+    .grid_container_fotos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container_store {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width:500px) {
+
+    .grid_container_fotos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container_store {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+@media (min-width:768px) {
+
+    .grid_container_fotos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container_store {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .container_store {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tekst {
+        font-size: 20px;
+    }
+
+
+
+}
